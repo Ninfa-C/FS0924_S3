@@ -237,17 +237,36 @@ const movies = [
 */
 console.log("------ Esercizio 9 --------");
 
-function oldest(movies) {
-  let oldestMovie = movies[0];
+function oldest() {
+  let oldestMovie = {...movies[0]};  //fare lo spread operator movieClone= {...movies}; let  oldestMovie = movieCLone[0]
   movies.forEach(function (element) {
-    if (Number(element.Year) < Number(oldestMovie.Year)) {
-      oldestMovie = element;
+    if (parseInt(element.Year) < parseInt(oldestMovie.Year)) {
+      oldestMovie = {...element};
     }
   });
   return oldestMovie;
 }
 
-console.log(oldest(movies));
+console.log(oldest());
+
+//CORREZIONE
+
+function oldestMovie(){
+  let oldYear=2050;
+  let oldMovie;
+  movies.forEach((element)=>{
+    let movieYear = parseInt(element.Year)
+    if (movieYear<oldYear){
+      oldYear= movieYear;
+      oldMovie= {...element}
+    }
+  });
+  return oldMovie
+}
+
+console.log (oldestMovie())
+
+
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
@@ -258,6 +277,8 @@ function quantity(array) {
 }
 
 console.log(quantity(movies));
+
+
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
@@ -272,6 +293,8 @@ function names(array) {
 
 console.log(names(movies));
 
+//return array.map((element)=>element.Title);
+
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
@@ -285,13 +308,23 @@ function filtro(array) {
 }
 
 console.log(filtro(movies));
+
+//oppure 
+const millenium = (z)=> {
+  return z.filter((element)=>{
+  return parseInt(element.Year) >2000;})
+}
+
+console.log (millenium)
+
+
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 console.log("------ Esercizio 13 --------");
 function yearSum(array) {
   let total = array.reduce(function (sum, element) {
-    return sum + Number(element.Year);
+    return sum + parseInt(element.Year);
   }, 0);
   return total;
 }
@@ -311,6 +344,9 @@ function imbdID(str) {
 }
 
 console.log(imbdID("tt4154796"));
+
+
+
 
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo 

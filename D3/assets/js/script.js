@@ -30,13 +30,15 @@ function pushArray() {
 }
 
 function printList() {
-  list.innerHTML = ""; //questo perchè altrimenti ristampa tutto l'array ogni volta
-  //oora la parte difficile
+  list.innerHTML = ""; //questo perchè altrimenti ristampa tutto l'array ogni volta  //oora la parte difficile
   for (let i = 0; i < toDoList.length; i++) {
     let newLi = document.createElement("li");
     let newSpan = document.createElement("span");
     newSpan.innerText = toDoList[i];
-    check(newSpan);
+    newSpan.addEventListener('click',function(){
+        check(newSpan);
+    })
+    //check(newSpan);
     let btnTrash = document.createElement("button");
     let icon = document.createElement("ion-icon");
     icon.setAttribute("name", "trash-outline");
@@ -56,7 +58,6 @@ function deleteItem(index) {
 }
 
 function check(newSpan) {
-  newSpan.addEventListener("click", function () {
     newSpan.classList.toggle("checked"); // Toggles the "barratura" class
-  });
+
 }

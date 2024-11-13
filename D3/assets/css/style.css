@@ -29,7 +29,6 @@ input {
     vertical-align: middle;
     background-color: #f9f9f9df;
 }
- 
 
 h2 {
     font-family: "League Script", cursive;
@@ -63,7 +62,7 @@ ul li:nth-child(odd) {
   }
   ul li:nth-child(even){
     color: #f9f9f9;
-    background-color: #0000001f;
+    background-color: #ecbcb462;
   }
 #list{
     text-align: center;
@@ -81,6 +80,7 @@ ul li:nth-child(odd) {
     padding: 5px;
     text-align: left;
     border-radius: 5px;
+    margin: 4px
     
   }
   li span {

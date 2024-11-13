@@ -20,7 +20,6 @@ btninsert.addEventListener("click", function (e) {
 });
 
 //funzione di push
-
 function pushArray() {
   if (myInput.value === "") {
     return;
@@ -37,7 +36,7 @@ function printList() {
     let newLi = document.createElement("li");
     let newSpan = document.createElement("span");
     newSpan.innerText = toDoList[i];
-    check(newSpan)
+    check(newSpan);
     let btnTrash = document.createElement("button");
     let icon = document.createElement("ion-icon");
     icon.setAttribute("name", "trash-outline");
@@ -57,7 +56,7 @@ function deleteItem(index) {
 }
 
 function check(newSpan) {
-    newSpan.addEventListener('click', function() {
-        newSpan.classList.toggle('checked'); // Toggles the "barratura" class
-    });
+  newSpan.addEventListener("click", function () {
+    newSpan.classList.toggle("checked"); // Toggles the "barratura" class
+  });
 }

@@ -2,16 +2,21 @@ html,body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-align: center;  
+    text-align: center; 
+    font-family: "Lato", sans-serif;
+    background-color: #F5CAC3; 
+    background-image: url(https://i.etsystatic.com/23780725/r/il/758320/2636499206/il_fullxfull.2636499206_1s1z.jpg);
 }
 
 
 #container {
     width: 60%;
-    border: 1px solid gray;
+    border: 1px solid #ffffff;
     border-radius: 5px;
-    margin: 35vh auto;
+    margin: 20vh auto;
     display: inline-block;
+    background-color: #00000088;
+    box-shadow: 26px 20px 15px -3px rgba(0,0,0,0.1);
 
 }
 
@@ -22,34 +27,50 @@ input {
     width: 85%;
     height: 1.5rem;
     vertical-align: middle;
+    background-color: #f9f9f9df;
 }
+ 
 
+h2 {
+    font-family: "League Script", cursive;
+    font-size: 3rem;
+    padding: 5px ;
+    color: #f9f9f9;
+    margin: 2rem;
+}
 .addBtn {
-    background-color: rgb(172, 229, 210);
+    background-color: #84A59D;
     border: none;
     height: 1.5rem;
+    width: 1;
     vertical-align: middle;
     height: 1.8rem;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .addBtn ion-icon {
     font-size: 1.8em;
     vertical-align: middle;
+    color: #f6f6f6;
 }
 
 .addBtn:hover {
-    background-color: #bbb;
+    background-color: #69827c;
   }
 
 ul li:nth-child(odd) {
-    background: #f9f9f9;
+    background: #F7EDE2;
+  }
+  ul li:nth-child(even){
+    color: #f9f9f9;
+    background-color: #0000001f;
   }
 #list{
     text-align: center;
     padding: 0;
-    width: 94%;
+    width: 92%;
     margin: 5px auto;
+    
     
 }
   ul li {
@@ -78,6 +99,8 @@ ul li:nth-child(odd) {
     height: 100%; 
     float: right;
     border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.468);
+    color: #f9f9f9;
   }
 
   ul li button:hover {

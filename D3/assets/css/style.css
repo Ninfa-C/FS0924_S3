@@ -1,0 +1,85 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;  
+}
+
+
+#container {
+    width: 60%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 35vh auto;
+    display: inline-block;
+
+}
+
+.header {
+}
+
+input {
+    width: 85%;
+    height: 1.5rem;
+    vertical-align: middle;
+}
+
+.addBtn {
+    background-color: rgb(172, 229, 210);
+    border: none;
+    height: 1.5rem;
+    vertical-align: middle;
+    height: 1.8rem;
+    border-radius: 3px;
+}
+
+.addBtn ion-icon {
+    font-size: 1.8em;
+    vertical-align: middle;
+}
+
+.addBtn:hover {
+    background-color: #bbb;
+  }
+
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+#list{
+    text-align: center;
+    padding: 0;
+    width: 94%;
+    margin: 5px auto;
+    
+}
+  ul li {
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 5px;
+    text-align: left;
+    border-radius: 5px;
+    
+  }
+  li span {
+    display: inline-block;
+
+}
+
+.checked {
+    text-decoration: line-through;
+  }
+
+  ul li button {
+    border: none;
+    vertical-align: middle;
+    margin-left: 5px;
+    height: 100%; 
+    float: right;
+    border-radius: 5px;
+  }
+
+  ul li button:hover {
+    background-color: #b34e4e;
+  }

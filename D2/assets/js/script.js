@@ -84,7 +84,7 @@ addParagraph();
 
 const hideFirstUl = () => {
   let hideList = document.getElementById("firstList");
-  hideList.innerText = "";
+  hideList.style.display='none';
 };
 
 hideFirstUl();
@@ -134,7 +134,7 @@ const generateTable = function () {
   const caption = document.createElement("caption");
   const h2 = document.createElement("h2");
   const thead = document.createElement("thead");
-  
+
   const tr = document.createElement("tr");
 
   h2.innerText = "tabella";
@@ -188,7 +188,9 @@ const generateTable = function () {
     const trData = document.createElement("tr");
 
     const tdImg = document.createElement("td");
-    tdImg.innerText = element.Immagine;
+    const img = document.createElement("img");
+  tdImg.innerText = element.Immagine;
+  tdImg.appendChild(img);
     trData.appendChild(tdImg);
 
     const tdName = document.createElement("td");
@@ -215,17 +217,48 @@ generateTable();
 //console.log(generateTable())
 
 /* ESERCIZIO 12
-      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
+      Crea una funzione che aggiunga una riga alla tabella precedentemente creata e 
+      fornisca i dati necessari come parametri
     */
 
-const addRow = function () {};
+const addRow = function (Immagine, nomeProdotto, quantità, Prezzo) {
+  const table = document.querySelector("table");
+  const tbody = table.querySelector("tbody");
+  const trData = document.createElement("tr");
+
+  const tdImg = document.createElement("td");
+  const img = document.createElement("img");
+  tdImg.innerText = Immagine;
+  tdImg.appendChild(img);
+  trData.appendChild(tdImg);
+
+  const tdName = document.createElement("td");
+  tdName.innerText = nomeProdotto;
+  trData.appendChild(tdName);
+
+  const tdQt = document.createElement("td");
+  tdQt.innerText = quantità;
+  trData.appendChild(tdQt);
+
+  const tdPrice = document.createElement("td");
+  tdPrice.innerText = Prezzo;
+  trData.appendChild(tdPrice);
+
+  tbody.appendChild(trData);
+};
+
+addRow(6, 'fff', 12,'xx');
 
 /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
-const hideAllImages = function () {};
-
+const hideAllImages = function () {
+  const immagini = document.querySelectorAll("table img");
+  immagini.forEach((img) => {
+    img.style.display = "none";
+  });
+};
 /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */

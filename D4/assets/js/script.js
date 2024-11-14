@@ -1,5 +1,6 @@
 const tombola = document.getElementById("tombola");
 const btnEstrai = document.getElementById('estrai')
+const btnAgain = document.getElementById('again')
 const nExtract = [];
 
 document.addEventListener("load", init());
@@ -7,7 +8,8 @@ document.addEventListener("load", init());
 function init() {
   cellCreation();
   estrazione();
-
+  //startPlaying()
+  again()
 }
 
 function cellCreation() {
@@ -24,7 +26,10 @@ function cellCreation() {
 
 function estrazione() {
     btnEstrai.addEventListener('click', function() {
-        // Generate a random number between 1 and 90
+        if (nExtract.length>=90){
+            btnEstrai.setAttribute('disabled', 'true')
+            return;
+        }
         let extract;     
         do {
             extract = Math.floor(Math.random() * 90) + 1;
@@ -44,6 +49,18 @@ function select() {
         }
     }
 }
+
+
+function again(){
+    btnAgain.addEventListener('click', function() {
+    nExtract.splice(0, nExtract.length)
+    let cell = document.querySelectorAll('#tombola div p');
+    cell.forEach(cell => {
+        cell.parentElement.classList.remove('select'); 
+})
+})}
+
+
 
 
 

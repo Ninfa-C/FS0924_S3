@@ -54,12 +54,26 @@ h1 {
     right: 0;
 }
 
-#estrai {
-
+#estrai, #again {
+    border-radius: 5px;
+    width: 8em;
+    background-color: #ffffff;
+    border: 1px double whitesmoke;
+    color: black;
+    cursor: pointer;
 }
 
 #tombola div.select{
     background-color: #ffffff;
     border: 1px double whitesmoke;
     color: black
+}
+
+.extra {
+    text-align: center;
+    margin:5rem;
+    }
+
+.extra p {
+    margin: 10px;
 }

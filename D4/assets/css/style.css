@@ -63,6 +63,12 @@ h1 {
     cursor: pointer;
 }
 
+#estrai.not{
+    background-color: rgb(222, 222, 222);
+    cursor: default;
+    color: rgba(0, 0, 0, 0.516)
+}
+
 #tombola div.select{
     background-color: #ffffff;
     border: 1px double whitesmoke;
@@ -71,7 +77,7 @@ h1 {
 
 .extra {
     text-align: center;
-    margin:5rem;
+    margin:3rem;
     }
 
 .extra p {

@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Outfit', sans-serif;
+}
+
+#containerTombola{
+    width: 380px;
+    margin: 20px auto;
+    _border: 1px solid black;
+    vertical-align: middle;
+    padding: 1.8em;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #b82d3d;
+    border-radius: 10px;
+}
+
+h1 {
+    font-style: italic;
+    color: #ffffff;
+    margin-bottom: 0.8em;
+    font-size: 2.5em;
+}
+#tombola {
+    width: 100%;
+    _border: 1px solid black;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#tombola div {
+    display: inline-block;
+    width: 9%;
+    height: 25px;
+    border: solid 1px;
+    position: relative;
+    border-radius: 50%;
+    margin: 1.5px;
+    background-color: #f7f9f87b;
+    border: 1px rgba(255, 255, 255, 0.315) solid;
+    color: rgba(255, 255, 255, 0.466);
+    
+}
+
+.cellValue {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+}
+
+#estrai {
+
+}
+
+#tombola div.select{
+    background-color: #ffffff;
+    border: 1px double whitesmoke;
+    color: black
+}
